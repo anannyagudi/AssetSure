@@ -5,8 +5,10 @@ import { useTheme } from '../context/ThemeContext';
 import {
     LayoutDashboard, CreditCard, Cpu, FileCheck, MonitorCheck,
     History, FileText, User, LogOut, ChevronLeft, ChevronRight,
-    Users, ShieldAlert, AlertTriangle, Bell, Sun, Moon
+    // Users, ShieldAlert, AlertTriangle, Bell, Sun, Moon
+    Users, AlertTriangle, Bell, Sun, Moon
 } from 'lucide-react';
+import AssetSureLogo from '../components/AssetSureLogo';
 
 const borrowerNav = [
     { to: '/borrower/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
@@ -51,8 +53,11 @@ const Sidebar = ({ variant }) => {
                 className={`flex items-center gap-3 px-4 py-5 ${collapsed ? 'justify-center' : ''}`}
                 style={{ borderBottom: '1px solid var(--border)' }}
             >
-                <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center shrink-0">
+                {/* <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center shrink-0">
                     <ShieldAlert size={16} className="text-white" />
+                </div> */}
+                <div className="flex items-center justify-center shrink-0">
+                    <AssetSureLogo size={collapsed ? 32 : 40} />
                 </div>
                 {!collapsed && (
                     <div>
